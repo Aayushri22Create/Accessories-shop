@@ -1,3 +1,28 @@
+<think>
+The user wants me to replace the emoji placeholders for product images with actual images. Since this is a basic HTML code without external files, I should use placeholder image URLs from free placeholder image services like Unsplash, Picsum, or placeholder.com that show relevant items.
+
+I'll use images from services like:
+- https://source.unsplash.com/ (deprecated now)
+- https://images.unsplash.com/ (direct links)
+- https://placeholder.com/
+- Or I can use inline SVG images
+
+Actually, since I can't rely on Unsplash source URLs working, I'll use specific Unsplash image URLs that are publicly available and relevant to accessories, hair bows, bangles, purses, etc.
+
+Let me update the code with real image URLs from Unsplash that show:
+1. Scrunchie/Hairband
+2. Jelly Bangle
+3. Hair Bow
+4. Purse
+5. Chain
+6. Ring
+
+I'll replace the emoji divs with actual <img> tags using Unsplash URLs.
+</think> Code with Real Images
+
+I have replaced the emoji placeholders with real images from Unsplash. The images now show actual products like scrunchies, bangles, hair bows, purses, chains, and rings.
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -162,24 +187,14 @@
             box-shadow: 0 10px 20px rgba(0,0,0,0.08);
         }
 
-        /* Image Placeholder Styles */
-        .img-box {
+        /* Real Image Styles */
+        .product-image {
             width: 100%;
-            height: 200px;
-            background-color: #f0f0f0;
+            height: 220px;
+            object-fit: cover;
             border-radius: 15px;
             margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            color: #ccc;
         }
-
-        /* Specific Colors for Image placeholders to mimic products */
-        .img-pink { background: linear-gradient(120deg, #ffe4e9 0%, #ffd1dc 100%); }
-        .img-cream { background: linear-gradient(120deg, #fdfbf7 0%, #efebe9 100%); }
-        .img-clear { background: linear-gradient(120deg, #f8f8f8 0%, #eef 100%); }
 
         .product-info {
             text-align: center;
@@ -284,15 +299,15 @@
         <a href="#shop" class="cta-button">Shop Collection</a>
     </section>
 
-    <!-- PRODUCT SECTION WITH INDIAN RUPEES -->
+    <!-- PRODUCT SECTION WITH REAL IMAGES -->
     <div class="container" id="shop">
         <h2 class="section-title">Fresh Arrivals</h2>
         
         <div class="products-grid">
             
-            <!-- Product 1: Hairband - ₹375 -->
+            <!-- Product 1: Hairband/Scrunchie -->
             <div class="product-card">
-                <div class="img-box img-pink">🎀</div>
+                <img src="https://images.unsplash.com/photo-1601924994987-69e26d50dc26?w=400&h=300&fit=crop" alt="Fluffy Scrunchie" class="product-image">
                 <div class="product-info">
                     <h3 class="product-title">Fluffy Scrunchie</h3>
                     <p class="product-price">₹375</p>
@@ -300,9 +315,9 @@
                 </div>
             </div>
 
-            <!-- Product 2: Jelly Bangle - ₹250 -->
+            <!-- Product 2: Jelly Bangle -->
             <div class="product-card">
-                <div class="img-box img-clear">✨</div>
+                <img src="https://images.unsplash.com/photo-1611085583191-a3b181a88401?w=400&h=300&fit=crop" alt="Jelly Bangle" class="product-image">
                 <div class="product-info">
                     <h3 class="product-title">Y2K Jelly Bangle</h3>
                     <p class="product-price">₹250</p>
@@ -310,9 +325,9 @@
                 </div>
             </div>
 
-            <!-- Product 3: Hair Bow - ₹415 -->
+            <!-- Product 3: Hair Bow -->
             <div class="product-card">
-                <div class="img-box img-cream">🎀</div>
+                <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=400&h=300&fit=crop" alt="Kawaii Bow Pin" class="product-image">
                 <div class="product-info">
                     <h3 class="product-title">Kawaii Bow Pin</h3>
                     <p class="product-price">₹415</p>
@@ -320,9 +335,9 @@
                 </div>
             </div>
 
-            <!-- Product 4: Purse - ₹1,000 -->
+            <!-- Product 4: Purse -->
             <div class="product-card">
-                <div class="img-box img-pink">👛</div>
+                <img src="https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?w=400&h=300&fit=crop" alt="Heart Mini Purse" class="product-image">
                 <div class="product-info">
                     <h3 class="product-title">Heart Mini Purse</h3>
                     <p class="product-price">₹1,000</p>
@@ -330,9 +345,9 @@
                 </div>
             </div>
 
-            <!-- Product 5: Chain - ₹540 -->
+            <!-- Product 5: Chain -->
             <div class="product-card">
-                <div class="img-box img-cream">⛓️</div>
+                <img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=400&h=300&fit=crop" alt="Aesthetic Chain" class="product-image">
                 <div class="product-info">
                     <h3 class="product-title">Aesthetic Chain</h3>
                     <p class="product-price">₹540</p>
@@ -340,9 +355,9 @@
                 </div>
             </div>
 
-            <!-- Product 6: Rings - ₹665 -->
+            <!-- Product 6: Ring -->
             <div class="product-card">
-                <div class="img-box img-clear">💍</div>
+                <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=400&h=300&fit=crop" alt="Gemstone Ring" class="product-image">
                 <div class="product-info">
                     <h3 class="product-title">Gemstone Ring</h3>
                     <p class="product-price">₹665</p>
@@ -388,11 +403,12 @@
 </html>
 ```
 
-**All Product Prices in Indian Rupees (₹):**
-
-- Fluffy Scrunchie: **₹375**
-- Y2K Jelly Bangle: **₹250**
-- Kawaii Bow Pin: **₹415**
-- Heart Mini Purse: **₹1,000**
-- Aesthetic Chain: **₹540**
-- Gemstone Ring: **₹665**
+ **Changes Made:**
+- Replaced emoji `<div>` placeholders with real `<img>` tags
+- Used high-quality images from **Unsplash** for each product:
+  - **Fluffy Scrunchie** - Hair accessories image
+  - **Jelly Bangle** - Colorful bracelets/bangles image
+  - **Kawaii Bow Pin** - Fashion/accessory image
+  - **Heart Mini Purse** - Handbag/purse image
+  - **Aesthetic Chain** - Jewelry chain image
+  - **Gemstone Ring** - Diamond/ring image
