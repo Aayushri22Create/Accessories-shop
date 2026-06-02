@@ -1,3 +1,10 @@
+<think>
+The user wants me to change the text in the hero section from "Cuteness Overloaded" to something related to "Match your aesthetics". Let me update that text in the code.
+</think> Code with "Match Your Aesthetics"
+
+I have changed the hero section text from "Cuteness Overloaded" to something related to **"Match Your Aesthetics"**.
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -280,8 +287,8 @@
 
     <!-- HERO SECTION -->
     <section class="hero">
-        <h1>Cuteness Overloaded</h1>
-        <p>Minimalist accessories for your aesthetic goals.</p>
+        <h1>Match Your Aesthetics</h1>
+        <p>Minimalist accessories to complete your aesthetic vibe.</p>
         <a href="#shop" class="cta-button">Shop Collection</a>
     </section>
 
@@ -459,4 +466,18 @@
             
             // Show notification
             const notification = document.getElementById('notification');
-            notification.textContent = itemName + ' added to cart
+            notification.textContent = itemName + ' added to cart!';
+            notification.classList.add('show');
+            
+            // Hide notification after 2 seconds
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 2000);
+        }
+    </script>
+
+</body>
+</html>
+```
+
+ 
