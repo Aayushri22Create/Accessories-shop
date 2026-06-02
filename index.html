@@ -1,3 +1,14 @@
+<think>
+The user wants me to:
+1. Add a small cart image beside the cart button
+2. Change the copyright year to 2026 in Pearl & Co.
+
+Let me update the code accordingly.
+</think> Updated Code with Cart Image & 2026 Copyright
+
+I have added a small cart icon/image beside the "Add to Cart" buttons and updated the copyright year to **2026**.
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -86,6 +97,14 @@
         .cart-icon {
             cursor: pointer;
             font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .cart-icon img {
+            width: 24px;
+            height: 24px;
         }
 
         /* --- HERO SECTION --- */
@@ -188,17 +207,27 @@
             margin-bottom: 15px;
         }
 
+        /* Add to Cart Button with Cart Image */
         .add-btn {
             background-color: var(--primary-pink);
             color: white;
             border: none;
-            padding: 10px 25px;
+            padding: 10px 20px;
             border-radius: 25px;
             cursor: pointer;
             width: 100%;
             font-family: 'Quicksand', sans-serif;
             font-weight: 600;
             transition: 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .add-btn img {
+            width: 18px;
+            height: 18px;
         }
 
         .add-btn:hover {
@@ -264,7 +293,10 @@
                 <li><a href="#">About</a></li>
             </ul>
         </nav>
-        <div class="cart-icon">Cart (0)</div>
+        <div class="cart-icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/3737/3737189.png" alt="Cart">
+            <span>Cart (0)</span>
+        </div>
     </header>
 
     <!-- HERO SECTION -->
@@ -286,7 +318,10 @@
                 <div class="product-info">
                     <h3 class="product-title">Fluffy Scrunchie</h3>
                     <p class="product-price">₹375</p>
-                    <button class="add-btn" onclick="addToCart('Fluffy Scrunchie')">Add to Cart</button>
+                    <button class="add-btn" onclick="addToCart('Fluffy Scrunchie')">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3737/3737189.png" alt="Cart Icon">
+                        Add to Cart
+                    </button>
                 </div>
             </div>
 
@@ -296,7 +331,10 @@
                 <div class="product-info">
                     <h3 class="product-title">Y2K Jelly Bangle</h3>
                     <p class="product-price">₹250</p>
-                    <button class="add-btn" onclick="addToCart('Jelly Bangle')">Add to Cart</button>
+                    <button class="add-btn" onclick="addToCart('Jelly Bangle')">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3737/3737189.png" alt="Cart Icon">
+                        Add to Cart
+                    </button>
                 </div>
             </div>
 
@@ -306,7 +344,10 @@
                 <div class="product-info">
                     <h3 class="product-title">Kawaii Bow Pin</h3>
                     <p class="product-price">₹415</p>
-                    <button class="add-btn" onclick="addToCart('Kawaii Bow Pin')">Add to Cart</button>
+                    <button class="add-btn" onclick="addToCart('Kawaii Bow Pin')">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3737/3737189.png" alt="Cart Icon">
+                        Add to Cart
+                    </button>
                 </div>
             </div>
 
@@ -316,7 +357,10 @@
                 <div class="product-info">
                     <h3 class="product-title">Heart Mini Purse</h3>
                     <p class="product-price">₹1,000</p>
-                    <button class="add-btn" onclick="addToCart('Heart Mini Purse')">Add to Cart</button>
+                    <button class="add-btn" onclick="addToCart('Heart Mini Purse')">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3737/3737189.png" alt="Cart Icon">
+                        Add to Cart
+                    </button>
                 </div>
             </div>
 
@@ -326,7 +370,10 @@
                 <div class="product-info">
                     <h3 class="product-title">Aesthetic Chain</h3>
                     <p class="product-price">₹540</p>
-                    <button class="add-btn" onclick="addToCart('Aesthetic Chain')">Add to Cart</button>
+                    <button class="add-btn" onclick="addToCart('Aesthetic Chain')">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3737/3737189.png" alt="Cart Icon">
+                        Add to Cart
+                    </button>
                 </div>
             </div>
 
@@ -336,7 +383,10 @@
                 <div class="product-info">
                     <h3 class="product-title">Gemstone Ring</h3>
                     <p class="product-price">₹665</p>
-                    <button class="add-btn" onclick="addToCart('Gemstone Ring')">Add to Cart</button>
+                    <button class="add-btn" onclick="addToCart('Gemstone Ring')">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3737/3737189.png" alt="Cart Icon">
+                        Add to Cart
+                    </button>
                 </div>
             </div>
 
@@ -346,7 +396,7 @@
     <!-- FOOTER -->
     <footer>
         <div class="footer-content">
-            <p>© 2023 Pearl & Co. | Aesthetic Vibes Only</p>
+            <p>© 2026 Pearl & Co. | Aesthetic Vibes Only</p>
             <p class="contact-info">Contact: <span>2341678564</span></p>
         </div>
     </footer>
@@ -360,7 +410,7 @@
         function addToCart(itemName) {
             // Update cart count
             cartCount++;
-            document.querySelector('.cart-icon').textContent = 'Cart (' + cartCount + ')';
+            document.querySelector('.cart-icon span').textContent = 'Cart (' + cartCount + ')';
             
             // Show notification
             const notification = document.getElementById('notification');
@@ -378,12 +428,3 @@
 </html>
 ```
 
- **Changes Made:**
-- Replaced emoji `<div>` placeholders with real `<img>` tags
-- Used high-quality images from **Unsplash** for each product:
-  - **Fluffy Scrunchie** - Hair accessories image
-  - **Jelly Bangle** - Colorful bracelets/bangles image
-  - **Kawaii Bow Pin** - Fashion/accessory image
-  - **Heart Mini Purse** - Handbag/purse image
-  - **Aesthetic Chain** - Jewelry chain image
-  - **Gemstone Ring** - Diamond/ring image
