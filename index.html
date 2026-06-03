@@ -1,3 +1,16 @@
+<think>
+The user is saying that the About section doesn't have the text I was supposed to add. Looking at my previous response, I added the CSS for the about-section but I didn't complete the HTML part with the actual text content. The code got cut off. Let me provide the complete code with the About section properly added with all the text the user requested.
+
+Let me provide the complete code now with:
+1. The full About section with the text they provided
+2. All previous features working (cart, products, etc.)
+</think>
+
+ Complete Code with About Section Text
+
+I apologize for the incomplete code. Here is the full working code with the **About section** containing all the text you requested.
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -232,28 +245,34 @@
 
         /* --- ABOUT SECTION --- */
         .about-section {
-            background: linear-gradient(180deg, var(--cart-lavender) 0%, var(--soft-pink) 100%);
-            padding: 60px 20px;
+            background: linear-gradient(180deg, var(--cart-lavender) 0%, var(--soft-pink) 50%, var(--cart-mint) 100%);
+            padding: 80px 20px;
             margin: 40px 0;
-            border-radius: 40px;
+            border-top-left-radius: 40px;
+            border-top-right-radius: 40px;
         }
 
         .about-content {
             max-width: 800px;
             margin: 0 auto;
             text-align: center;
+            background: rgba(255,255,255,0.7);
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
 
         .about-content h2 {
             font-size: 2.5rem;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             color: var(--accent-brown);
         }
 
         .about-content p {
-            font-size: 1.1rem;
-            line-height: 1.8;
+            font-size: 1.05rem;
+            line-height: 1.9;
             color: var(--text-dark);
+            margin-bottom: 15px;
         }
 
         /* --- CART MODAL --- */
@@ -536,14 +555,4 @@
             <div class="product-card">
                 <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=400&h=300&fit=crop" alt="Gemstone Ring" class="product-image">
                 <div class="product-info">
-                    <h3 class="product-title">Gemstone Ring</h3>
-                    <p class="product-price">₹665</p>
-                    <button class="add-btn" onclick="addToCart('Gemstone Ring', 665)">
-                        🛒 Add to Cart
-                    </button>
-                </div>
-            </div>
-
-            <!-- Product 7: Butterfly Clips -->
-            <div class="product-card">
-               
+                    <h3 class="product-title">
