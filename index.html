@@ -1,3 +1,19 @@
+<think>
+The user wants me to add an "About" section to the website with the specific text they provided. I need to add this section to the HTML code. Let me update the code to include an About section with that content.
+
+I'll add:
+1. An "About" section in the navigation
+2. An About section in the hero area or below the shop section
+3. Include the text provided by the user
+
+Let me update the complete code with the About section added.
+</think>
+
+ Code with About Section Added
+
+I have added the **About section** to the website with the text you provided. The About section is now accessible from the navigation menu and displays the message about Pearl & Co.
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -230,6 +246,32 @@
             transform: scale(0.95);
         }
 
+        /* --- ABOUT SECTION --- */
+        .about-section {
+            background: linear-gradient(180deg, var(--cart-lavender) 0%, var(--soft-pink) 100%);
+            padding: 60px 20px;
+            margin: 40px 0;
+            border-radius: 40px;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--accent-brown);
+        }
+
+        .about-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-dark);
+        }
+
         /* --- CART MODAL --- */
         .cart-modal {
             display: none;
@@ -425,7 +467,7 @@
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#shop">Shop</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="#about">About</a></li>
             </ul>
         </nav>
         <div class="cart-icon" onclick="openCart()">
@@ -520,16 +562,4 @@
 
             <!-- Product 7: Butterfly Clips -->
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1596906663294-e537971d5d33?w=400&h=300&fit=crop" alt="Butterfly Clips" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">Butterfly Clips</h3>
-                    <p class="product-price">₹199</p>
-                    <button class="add-btn" onclick="addToCart('Butterfly Clips', 199)">
-                        🛒 Add to Cart
-                    </button>
-                </div>
-            </div>
-
-            <!-- Product 8: Pearl Earrings -->
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=400&h=300&fit
+               
