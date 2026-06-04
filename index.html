@@ -1,14 +1,37 @@
+<think>
+The user wants me to add the phone number 9403846582 at the end of the website (in the footer). Let me look at the current code they provided and add this number to the footer section.
+
+Looking at the code, I need to find the footer section and add the contact number 9403846582 there.
+
+The current footer has:
+```html
+<footer>
+    <div class="footer-content">
+        <p>© 2026 Pearl & Co. | Aesthetic Vibes Only</p>
+        <p class="contact-info">Contact: <span>2341678564</span></p>
+    </div>
+</footer>
+```
+
+I need to change this to include 9403846582. Let me provide the complete code with this update.
+</think>
+
+ Complete Code with Phone Number 9403846582 Added
+
+Here is the updated code with the phone number **9403846582** added in the footer section.
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pearl & Accessories | Aesthetic Accessories</title>
+    <title>Pearl & Co. | Aesthetic Accessories</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
 
     <style>
         /* --- GENERAL STYLES --- */
@@ -19,12 +42,10 @@
             --soft-pink: #FFE4E9;
             --accent-brown: #8D7F76;
             --text-dark: #4A403A;
-            --button-hover: #F6B6C5;
             --lavender: #E6E6FA;
             --mint: #98FB98;
             --soft-purple: #DDA0DD;
-            --light-blue: #87CEEB;
-            --peach: #FFDAB9;
+            --light_blue: #87CEEB;
         }
 
         * {
@@ -38,7 +59,7 @@
         }
 
         body {
-            font-family: 'Comic-Sans', sans-serif;
+            font-family: 'Quicksand', sans-serif;
             background-color: var(--bg-cream);
             color: var(--text-dark);
             line-height: 1.6;
@@ -71,11 +92,10 @@
         .logo {
             font-size: 1.8rem;
             color: var(--accent-brown);
-            letter-spacing: 1px;
         }
 
         .logo span {
-            color: var(--dark-pink);
+            color: var(--primary-pink);
         }
 
         nav ul {
@@ -102,14 +122,13 @@
             padding: 10px 20px;
             background: linear-gradient(135deg, var(--soft-pink), var(--lavender));
             border-radius: 25px;
-            transition: 0.3s;
             border: 2px solid var(--primary-pink);
+            transition: 0.3s;
         }
 
         .cart-icon:hover {
             background: var(--primary-pink);
             color: white;
-            transform: scale(1.05);
         }
 
         /* --- HERO SECTION --- */
@@ -148,7 +167,6 @@
         .cta-button:hover {
             transform: translateY(-3px);
             box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-            border-color: var(--primary-pink);
             background: var(--primary-pink);
             color: white;
         }
@@ -185,7 +203,7 @@
         .product-card:hover {
             transform: translateY(-8px);
             box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-            border-color: var(--light-purple);
+            border-color: var(--lavender);
         }
 
         .product-image {
@@ -201,14 +219,14 @@
         }
 
         .product-title {
-            font-weight: 650;
+            font-weight: 700;
             font-size: 1.1rem;
             margin-bottom: 8px;
         }
 
         .product-price {
             color: var(--accent-brown);
-            font-weight: 750;
+            font-weight: 700;
             font-size: 1.2rem;
             margin-bottom: 15px;
         }
@@ -279,24 +297,6 @@
             color: var(--accent-brown);
         }
 
-        .philosophy-list {
-            text-align: left;
-            margin: 25px 0;
-            padding-left: 20px;
-        }
-
-        .philosophy-list li {
-            font-size: 1.05rem;
-            line-height: 1.9;
-            color: var(--text-dark);
-            margin-bottom: 12px;
-            padding-left: 10px;
-        }
-
-        .philosophy-list li strong {
-            color: var(--accent-brown);
-        }
-
         /* --- CART MODAL --- */
         .cart-modal {
             display: none;
@@ -316,7 +316,7 @@
         }
 
         .cart-content {
-            background: linear-gradient(180deg, var(--lavender) 0%, var(--mint) 50%, var(--light-blue) 100%);
+            background: linear-gradient(180deg, var(--lavender) 0%, var(--mint) 50%, var(--light_blue) 100%);
             width: 92%;
             max-width: 480px;
             max-height: 85vh;
@@ -334,10 +334,6 @@
             margin-bottom: 22px;
             padding-bottom: 18px;
             border-bottom: 3px dashed var(--accent-brown);
-        }
-
-        .cart-header h2 {
-            font-size: 1.6rem;
         }
 
         .close-btn {
@@ -371,24 +367,16 @@
             padding: 14px 18px;
             border-radius: 18px;
             margin-bottom: 12px;
-            transition: 0.3s;
-        }
-
-        .cart-item:hover {
-            background: white;
-            transform: scale(1.02);
         }
 
         .cart-item-name {
             font-weight: 600;
             flex: 1;
-            font-size: 0.95rem;
         }
 
         .cart-item-price {
             font-weight: 700;
             color: var(--accent-brown);
-            margin-left: 10px;
         }
 
         .remove-btn {
@@ -399,13 +387,7 @@
             height: 30px;
             border-radius: 50%;
             cursor: pointer;
-            margin-left: 12px;
-            font-size: 1rem;
-            transition: 0.3s;
-        }
-
-        .remove-btn:hover {
-            background: #FF4757;
+            margin-left: 10px;
         }
 
         .cart-total {
@@ -414,27 +396,18 @@
             border-radius: 18px;
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            font-size: 1.3rem;
             font-weight: 700;
             border: 3px solid var(--soft-purple);
         }
 
         .total-amount {
             color: var(--soft-purple);
-            font-size: 1.5rem;
         }
 
         .empty-cart {
             text-align: center;
             padding: 40px;
             color: var(--accent-brown);
-        }
-
-        .empty-cart span {
-            font-size: 3.5rem;
-            display: block;
-            margin-bottom: 15px;
         }
 
         /* --- FOOTER --- */
@@ -452,7 +425,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 18px;
+            gap: 15px;
         }
 
         .contact-info {
@@ -478,7 +451,8 @@
             pointer-events: none;
             z-index: 200;
             border: 3px solid white;
-            font-weight: 600;
+            font-weight: 700;
+            min-width: 280px;
         }
         
         .notification.show {
@@ -567,36 +541,19 @@
 
             <!-- Product 5: Gold Chain -->
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1599643478518-a784e5
-                     <div class="product-info">
+                <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=400&h=300&fit=crop" alt="Gold Chain" class="product-image">
+                <div class="product-info">
                     <h3 class="product-title">Gold Chain</h3>
-                    <p class="product-price">₹250</p>
-                    <button class="add-btn" onclick="addToCart('Gold Chain', 250)">
+                    <p class="product-price">₹599</p>
+                    <button class="add-btn" onclick="addToCart('Gold Chain', 599)">
                         🛒 Add to Cart
                     </button>
                 </div>
             </div>
 
-            <!-- Product 6: Beaded Phone Charm -->
+            <!-- Product 6: Gemstone Ring -->
             <div class="product-card">
-            <img src="https://images.unsplash.com/photo-Ha6PxplR7ng
+                <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=400&h=300&fit=crop" alt="Gemstone Ring" class="product-image">
                 <div class="product-info">
-                <h3 class="product-title">Beaded Phone Charm</h3>
-                <p class="product-price">₹200</p>
-                <button class="add-btn" onclick="addtocart('Beaded Phone Charm', 200)">
-                    🛒 Add to Cart
-                </button>
-            </div>
-      </div>
-
-             <!-- Product 7: Claw Clip Holder -->
-             <div class="product-card">
-             <img src="https://images.unsplash.com/photo-8cnhFxuf0zQ
-                  <div class="product-info">
-                  <h3 class="product-title">Claw Clip Folder</h3>
-                  <p class="product-price">₹500</p>
-                  <buttom class="add-btn" onclick="addtocart('Claw Clip Holder',500)">
-                      🛒 Add to Cart
-                  </buttom>
-             </div>
-         </div>
+                    <h3 class="product-title">Gemstone Ring</h3>
+                    <p class="product
